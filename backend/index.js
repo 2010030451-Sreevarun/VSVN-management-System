@@ -17,7 +17,7 @@ app.use(express.json({ limit: '10mb' }))
 app.use(cors())
 
 mongoose
-    .connect('mongodb+srv://v4runk4tu:Bunny2002@vsvnc1.apon1.mongodb.net/school_db?retryWrites=true&w=majority&appName=VSVNC1', {
+    .connect(process.env.MONGO_URL, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
